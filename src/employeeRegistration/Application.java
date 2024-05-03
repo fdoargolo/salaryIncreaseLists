@@ -41,7 +41,7 @@ public class Application {
 		double percentage = scanner.nextDouble();
 		
 		for (Employee employee: employees) {
-			if(employee.id == idIncrease) {
+			if(employee.getId()== idIncrease) {
 				employee.salaryIncrease(percentage);
 				break; 
 			}
