@@ -41,9 +41,12 @@ public class Application {
 		double percentage = scanner.nextDouble();
 		
 		for (Employee employee: employees) {
-			if(employee.getId()== idIncrease) {
+			if(employee.getId() == idIncrease) {
 				employee.salaryIncrease(percentage);
 				break; 
+			}
+			else {
+				System.out.println("This ID does not exist!");
 			}
 		}
 		
