@@ -22,14 +22,13 @@ public class Application {
 			System.out.println("Employee " + (i + 1) + "#:");
 			System.out.print("ID: ");
 			int id = scanner.nextInt();
-			
+
 			while (idChecker(employees, id) != null) {
 				System.out.println("ID already taken, try again:");
 				System.out.print("ID: ");
 				id = scanner.nextInt();
-			
 			}
-			
+
 			scanner.nextLine();
 			System.out.print("Name: ");
 			String name = scanner.nextLine();
@@ -45,20 +44,14 @@ public class Application {
 		int idIncrease = scanner.nextInt();
 		scanner.nextLine();
 
-		//for (Employee employee : employees) {
-			//if (employee.getId() == idIncrease) {
-				//employee.salaryIncrease(percentage);
-			//}erro aqui
-		//}
-		
 		Employee result = idChecker(employees, idIncrease);
-		if(result != null) {
+		if (result != null) {
 			System.out.print("Enter the porcentage:");
 			double percentage = scanner.nextDouble();
 			result.salaryIncrease(percentage);
-		}else {
+		} else {
 			System.out.println("ID does not exist.");
-		}// verificar isso aqui
+		}
 
 		System.out.println("List of employees: ");
 
@@ -73,7 +66,5 @@ public class Application {
 		Employee result = list.stream().filter(x -> x.getId() == id).findFirst().orElse(null);
 		return result;
 	}
-	
-	
 
 }
